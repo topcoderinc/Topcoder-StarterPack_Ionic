@@ -1,0 +1,34 @@
+<ion-view view-title="Details" cache-view="false">
+  <ion-content>
+    <div class="list card">
+      <div class="item">
+        <ion-item class="item-divider">
+          <h3>ID</h3>
+        </ion-item>
+        <ion-item ng-bind="vm.id">
+        </ion-item>
+      </div>
+      <div class="item" ng-repeat='field in vm.fields'>
+        <ion-item class="item-divider">
+          <h3>{{field.fieldName}}</h3>
+        </ion-item>
+        <ion-item ng-bind="field.parsedFieldValue" class="item-icon-right item-text-wrap">
+        </ion-item>
+        <p>
+          <a href="javascript:;" class="subdued" ng-click="vm.showImage(field.parsedFieldValue)"
+             ng-if='field.parsedFieldValue && vm.gameFields[field.fieldName].type=="image"'>View image</a>
+          <a href="javascript:;" class="subdued"
+             ui-sref='app.updateGame({id: {{vm.id}}, fieldName:"{{field.fieldName}}", fieldValue:{{field.fieldValue}} })'>
+            Edit</a>
+        </p>
+      </div>
+    </div>
+    <script id="image-modal.html" type="text/ng-template">
+      <div class="modal image-modal transparent" ng-click="vm.closeModal()">
+        <ion-pane class="transparent">
+          <img ng-src="{{vm.imageSrc}}" class="fullscreen-image" alt="{{vm.imageSrc}}"/>
+        </ion-pane>
+      </div>
+    </script>
+  </ion-content>
+</ion-view>

@@ -1,0 +1,4 @@
+/*background color for menu and must match menu index from menu_{index}.html */
+ion-side-menu ion-list ion-item:nth-child(2)  a {
+  background-color: red !important;
+}

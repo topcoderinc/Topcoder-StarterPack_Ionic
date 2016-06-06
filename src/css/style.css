@@ -1,0 +1,7 @@
+.md-scroll-mask { position: initial;}
+
+label.item.has-error {
+  border-bottom: 2px solid red;
+}
+
+

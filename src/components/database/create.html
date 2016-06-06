@@ -1,0 +1,75 @@
+<ion-view view-title="New">
+  <ion-content>
+    <form name="newForm" novalidate>
+      <div class="list">
+        <label class="item item-input" ng-class="{ 'has-error' : newForm.gameId.$invalid}">
+          <span class="input-label">gameId</span>
+          <input type="number" ng-model="vm.entity.gameId" name="gameId"/>
+        </label>
+        <label class="item item-input" >
+          <span class="input-label">name</span>
+          <input type="text" ng-model="vm.entity.name"/>
+        </label>
+        <label class="item item-input">
+          <span class="input-label">userComment</span>
+          <input type="text" ng-model="vm.entity.userComment"/>
+        </label>
+        <label class="item item-input"  ng-class="{ 'has-error' : newForm.image.$invalid}">
+          <span class="input-label">image</span>
+          <input type="url" ng-model="vm.entity.image" name="image"/>
+        </label>
+        <label class="item item-input" ng-class="{ 'has-error' : newForm.thumbnail.$invalid}">
+          <span class="input-label">thumbnail</span>
+          <input type="url" ng-model="vm.entity.thumbnail" name="thumbnail"/>
+        </label>
+        <label class="item item-input" ng-class="{ 'has-error' : newForm.minPlayers.$invalid}">
+          <span class="input-label">minPlayers</span>
+          <input type="number" ng-model="vm.entity.minPlayers" name="minPlayers"/>
+        </label>
+        <label class="item item-input" ng-class="{ 'has-error' : newForm.maxPlayers.$invalid}">
+          <span class="input-label"> maxPlayers</span>
+          <input type="number" ng-model="vm.entity. maxPlayers" name="maxPlayers"/>
+        </label>
+        <label class="item item-input" ng-class="{ 'has-error' : newForm.playingTime.$invalid}">
+          <span class="input-label">playingTime</span>
+          <input type="number" ng-model="vm.entity.playingTime" name="playingTime"/>
+        </label>
+        <label class="item item-input" ng-class="{ 'has-error' : newForm.yearPublished.$invalid}">
+          <span class="input-label">yearPublished</span>
+          <input type="number" ng-model="vm.entity.yearPublished" name="yearPublished"/>
+        </label>
+        <label class="item item-input" ng-class="{ 'has-error' : newForm.bggRating.$invalid}">
+          <span class="input-label">bggRating</span>
+          <input type="number" ng-model="vm.entity.bggRating" name="bggRating"/>
+        </label>
+        <label class="item item-input" ng-class="{ 'has-error' : newForm.averageRating.$invalid}">
+          <span class="input-label">averageRating</span>
+          <input type="number" ng-model="vm.entity.averageRating" name="averageRating"/>
+        </label>
+        <label class="item item-input" ng-class="{ 'has-error' : newForm.rank.$invalid}">
+          <span class="input-label">rank</span>
+          <input type="number" ng-model="vm.entity.rank" name="rank"/>
+        </label>
+        <label class="item item-input" ng-class="{ 'has-error' : newForm.numPlays.$invalid}">
+          <span class="input-label">numPlays</span>
+          <input type="number" ng-model="vm.entity.numPlays" name="numPlays"/>
+        </label>
+
+        <label class="item item-input" ng-class="{ 'has-error' : newForm.rating.$invalid}">
+          <span class="input-label">rating</span>
+          <input type="number" ng-model="vm.entity.rating" name="rating"/>
+        </label>
+        <ion-toggle ng-model="vm.entity.isExpansion" toggle-class="toggle-calm">isExpansion</ion-toggle>
+        <ion-toggle ng-model="vm.entity.owned" toggle-class="toggle-calm">owned</ion-toggle>
+        <ion-toggle ng-model="vm.entity.preOrdered" toggle-class="toggle-calm">preOrdered</ion-toggle>
+        <ion-toggle ng-model="vm.entity.forTrade" toggle-class="toggle-calm">forTrade</ion-toggle>
+        <ion-toggle ng-model="vm.entity.previousOwned" toggle-class="toggle-calm">previousOwned</ion-toggle>
+        <ion-toggle ng-model="vm.entity.want" toggle-class="toggle-calm">want</ion-toggle>
+        <ion-toggle ng-model="vm.entity.wantToPlay" toggle-class="toggle-calm">wantToPlay</ion-toggle>
+        <ion-toggle ng-model="vm.entity.wantToBuy" toggle-class="toggle-calm">wantToBuy</ion-toggle>
+        <ion-toggle ng-model="vm.entity.wishList" toggle-class="toggle-calm">wishList</ion-toggle>
+        <button class="button button-block button-positive" ng-click="vm.newGame(newForm)">Submit</button>
+      </div>
+    </form>
+  </ion-content>
+</ion-view>

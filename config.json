@@ -1,0 +1,14 @@
+{
+  "dev": {
+    "APP_VERSION": "0.1.0",
+    "API_TITLE": "Ionic Buildpack Demo",
+    "API_URL": "https://damp-cliffs-16151.herokuapp.com/api/v1",
+    "API_TOKEN": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlcyI6WyJzdXBlci1hZG1pbiJdLCJlbWFpbCI6InN1cGVyQHRlc3QuY29tIiwiaWF0IjoxNDYzODA4OTA5fQ.tzcdo_YMQOtzRC15sktJUTwhzPD1ncyxUDx-eQ2Kvzs"
+  },
+  "test": {
+    "APP_VERSION": "1.0.0",
+    "API_TITLE": "Ionic Buildpack Demo",
+    "API_URL": "https://bp-ionic-heroku-01.herokuapp.com/api/v1",
+    "API_TOKEN": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlcyI6WyJzdXBlci1hZG1pbiJdLCJlbWFpbCI6InN1cGVyQHRlc3QuY29tIiwiaWF0IjoxNDYzODA4OTA5fQ.tzcdo_YMQOtzRC15sktJUTwhzPD1ncyxUDx-eQ2Kvzs"
+  }
+}

@@ -1,0 +1,27 @@
+<ion-view view-title="Search">
+  <ion-content>
+    <form name="searchForm" novalidate>
+      <div class="list">
+        <label class="item item-input">
+          <span class="input-label">Name</span>
+          <input type="text" ng-model="vm.filter.name" name="name"/>
+        </label>
+        <label class="item item-input item-select">
+          <span class="input-label">Playing time</span>
+          <select ng-model="vm.filter.playingTime" name="playingtime">
+            <option value="">Please Select</option>
+            <option value="{{option.value}}" ng-repeat="option in vm.options">{{option.name}}</option>
+          </select>
+        </label>
+        <div class="item item-divider">Average Rating:</div>
+        <div class="item">
+          <div ya-no-ui-slider='vm.rangeOptions'></div>
+        </div>
+        <div class="item">
+          Range : [{{vm.rangeOptions.start.join(',')}}]
+        </div>
+        <button class="button button-block button-positive" ng-click="vm.searchGames()">Search</button>
+      </div>
+    </form>
+  </ion-content>
+</ion-view>

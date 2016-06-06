@@ -1,0 +1,31 @@
+<ion-view view-title="Home">
+  <ion-nav-buttons side="secondary">
+    <button class="button button-icon icon ion-plus" ui-sref="app.newGame()"></button>
+    <button class="button button-icon icon ion-ios-search-strong" ui-sref="app.searchGames()"></button>
+  </ion-nav-buttons>
+  <ion-content overflow-scroll="false">
+    <div class="row" ng-if="vm.filters.length">
+      <div class="col"><strong>Filters:</strong></div>
+      <div class="col" ng-repeat="filter in vm.filters">{{filter}}</div>
+    </div>
+    <div class="row" ng-if="vm.loaded">
+      <div class="col" ng-if="vm.totalRecords"><strong>Total:</strong> {{vm.totalRecords}}</div>
+      <div class="col" ng-if="!vm.totalRecords">No records found.</div>
+    </div>
+    <ion-list>
+      <ion-item collection-repeat="item in vm.items" href="#/app/games/{{item.id}}"
+                class="item-icon-right item-text-wrap">
+        <h2>{{ item.name || "id:"+item.id}}</h2>
+        <ion-option-button class="button-assertive" ng-click="vm.confirmDelete(item, $index)">Delete?
+        </ion-option-button>
+        <i class="icon ion-chevron-right icon-accessory"></i>
+      </ion-item>
+    </ion-list>
+    <ion-infinite-scroll
+      ng-if="!vm.end"
+      immediate-check="false"
+      on-infinite="vm.loadMore()"
+      distance="1%">
+    </ion-infinite-scroll>
+  </ion-content>
+</ion-view>

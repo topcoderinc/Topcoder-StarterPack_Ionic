@@ -1,0 +1,22 @@
+<ion-view view-title="Update">
+  <ion-content>
+    <form name="updateForm" novalidate>
+      <div class="list">
+        <label class="item item-input" ng-if='vm.field.type!="boolean"' ng-class="{ 'has-error' : updateForm.$invalid}">
+          <span class="input-label">{{vm.field.fieldName}}</span>
+          <input type="text" ng-model="vm.field.fieldValue" ng-if='vm.field.type=="string"'
+                 name="{{vm.field.fieldName}}">
+          <input type="number" ng-model="vm.field.fieldValue" ng-if='vm.field.type=="number"'
+                 name="{{vm.field.fieldName}}">
+          <input type="url" ng-model="vm.field.fieldValue" ng-if='vm.field.type=="image"' name="{{vm.field.fieldName}}">
+        </label>
+        <ion-toggle ng-model="vm.field.fieldValue" toggle-class="toggle-calm" ng-if='vm.field.type=="boolean"'>
+          {{vm.field.fieldName}}
+        </ion-toggle>
+        <button class="button button-block button-positive" ng-click="vm.updateField(updateForm)"
+                ng-disabled="updateForm.$invalid">Submit
+        </button>
+      </div>
+    </form>
+  </ion-content>
+</ion-view>
