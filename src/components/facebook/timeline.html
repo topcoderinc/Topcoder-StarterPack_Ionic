@@ -1,0 +1,36 @@
+<ion-view title="Facebook Post Share" >
+    <ion-content>
+        <div class="row row-center">
+		    <div class="col">       
+		        <form name="fbpostForm" novalidate="" ng-submit="postFeed(fbpostForm)" > 
+		    		<!-- here we add a section to send email part -->
+		          	<div class="row responsive-sm padding remvoeBP">
+		            	<div class="col ibp-block">
+		                  	<div  class="list  removePM ">
+		                      	<label class="item item-input"  >
+		                          	<textarea name="share_post" ng-model="post" required=""></textarea>		                          		
+		                      	</label>
+
+			                    <div class="error-container" ng-show="fbpostForm.$submitted || (fbpostForm.share_post.$dirty && fbpostForm.share_post.$invalid) || (fbpostForm.share_post.$dirty && fbpostForm.share_post.$error) || (fbpostForm.share_post.$touched && fbpostForm.share_post.$invalid) " >
+			                          
+			                        <div class="error" ng-show="fbpostForm.share_post.$error.required">
+			                            <i class="ion-information-circled"></i> 
+			                            This field is required!
+			                        </div>
+
+			                    </div>    
+		                  </div>
+
+		                  <button class="button ion-unlocked button-block energized-bg" type="submit" > Share </button> 
+		            </div>
+		          </div>
+		    	</form>
+		  
+			    <div class="row  padding removePM">
+					<div class="col"> <a class=" button-positive button button-block cust-btn" ng-click="reset()">Reset </a> </div>
+				</div>        
+	    	</div>
+		</div>	
+    </ion-content>
+</ion-view>
+

@@ -1,0 +1,56 @@
+
+.ibpBg{
+
+	}
+
+.ibp-block {
+    background:#CCC;
+    border-radius: 5px;
+    border-top: 5px solid #ff9800;
+    margin: 3rem auto;
+}
+
+.top-content { padding-top: 10vh;  text-align: center;   }
+.remvoeBP{ padding-bottom:0px;}
+.removePM{ margin-top:0px; margin-bottom:0px; padding-top:0px; padding-bottom:0px; }
+
+.ibpBg .button {width:100%;}
+
+
+.error-container {
+  margin: 5px 0;
+}
+ 
+.error-container:last-child {
+    margin: 5px 0 0;
+}
+ 
+.error {
+  padding: 10px 16px;
+  font-family: "Arial Black", Gadget, sans-serif;
+  font-size: 11px;
+  
+  color: #f14b4b;
+  vertical-align: middle;
+}
+ 
+.error i {
+  font-size: 24px;
+  color: #f14b4b;
+  vertical-align: middle;
+}
+ 
+.last-error-container > .error {
+  padding: 10px 16px 0;
+}
+ 
+
+
+
+label.item.has-error {  
+  border-bottom: 1px solid red;
+}
+ 
+.no-errors {
+  border-bottom: 3px solid green;
+}
