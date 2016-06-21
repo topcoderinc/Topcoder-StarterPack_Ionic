@@ -1,0 +1,16 @@
+<ion-view view-title="Email">
+  <ion-content>
+    <form name="emailForm" novalidate>
+      <div class="list">
+        <label class="item item-input" ng-class="{ 'has-error' : (emailForm.$submitted || !emailForm.toEmail.$pristine) && emailForm.$invalid}">
+          <span class="input-label">destination email</span>
+          <input type="email" ng-model="vm.toEmail" name="toEmail" required/>
+        </label>
+        </div>
+      <div class="button-bar">
+          <button class="button button-positive" ng-click="vm.sendEmail(emailForm)" type="submit" ng-disabled="(emailForm.$submitted || !emailForm.toEmail.$pristine) && emailForm.$invalid">Send Email</button>
+          <button class="button button-balanced" ng-click="vm.getDeliveryStatus()" type="button">Get Delivery Status</button>
+      </div>
+    </form>
+  </ion-content>
+</ion-view>
