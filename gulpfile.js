@@ -11,7 +11,7 @@
 'use strict';
 
 var gulp = require('gulp');
-gulp.modules = process.env.ANGULAR_MODULES || "'ionic','ngResource','ya.nouislider'";
+gulp.modules = process.env.ANGULAR_MODULES || "'ionic','ngResource','ya.nouislider', 'ngCordova', 'ngCordovaOauth', 'ngTwitter'";
 gulp.paths = {
   src: 'src',
   dist: 'www',
