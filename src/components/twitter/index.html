@@ -1,0 +1,21 @@
+<ion-view view-title="Twitter">
+
+
+  <ion-content>
+    <button class="button button-block button-positive" ng-click="vm.share()">Tweet</button>
+    <button class="button button-block button-assertive" ng-click="vm.reset()" ng-show="authorized">Reset</button>
+  </ion-content>
+
+  <script id="twitter-post-popup.html" type="text/ng-template">
+    <div>
+      <textarea data-ng-model="post.text" class="social-textarea" rows="5"></textarea>
+    </div>
+  </script>
+
+</ion-view>
+
+
+
+
+
+
