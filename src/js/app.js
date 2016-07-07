@@ -34,7 +34,7 @@
       return {
         request: function (reqConfig) {
           if (reqConfig.url.indexOf("html") === -1) {
-            reqConfig.headers['Authorization'] = 'Bearer ' + API_TOKEN;
+            reqConfig.headers['Authorization'] = reqConfig.headers['Authorization'] || 'Bearer ' + API_TOKEN;
             if (reqConfig.url.indexOf("http") !== 0) {
               reqConfig.url = API_URL + reqConfig.url;
             }
