@@ -1,0 +1,23 @@
+<ion-view view-title="Push">
+  <ion-content>
+    <div class="list">
+      <label class="item item-input">
+        <span class="input-label">Notification Message</span>
+        <input type="text" ng-model="vm.notificationMessage" name="notificationMessage"/>
+      </label>
+    </div>
+    <div class="button-bar">
+      <button class="button button-outline button-positive" ng-click="vm.pickDate()" type="submit">
+        {{ vm.pickedDate | date: "shortDate" }}
+      </button>
+      <button class="button button-outline button-positive" ng-click="vm.pickTime()" type="submit">
+        {{ vm.pickedTime | date: "shortTime" }}
+      </button>
+    </div>
+    <div class="button-bar padding-top">
+      <button class="button button-positive" ng-click="vm.schedulePushNotification()" type="submit">
+        Schedule Push Notification
+      </button>
+    </div>
+  </ion-content>
+</ion-view>
